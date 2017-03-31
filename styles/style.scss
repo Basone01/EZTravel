@@ -1,0 +1,97 @@
+@import 'reset';
+@import 'variables';
+@import 'element';
+@import 'class';
+@import 'id';
+@import 'component';
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+// #main-menu{
+// 	.a-button{
+// 		width: 27%;
+// 		font-size:175%;
+// 		padding: 10px 1%;
+// 		margin:3vh 1% 3vh 1%;
+// 		color:$mainmenu-btn-font-color;
+// 		background-color: $mainmenu-btn-bg-color;
+
+// 	}
+// 	.a-button:hover{
+// 		color:$mainmenu-btn-font-color;
+// 	    border-color: $mainmenu-btn-border-color-active;
+// 	    background-color: $mainmenu-btn-bg-color-active;
+// 	    font-size:200%;
+// 	}
+// }
+
+// h1.header-text{
+// 	text-shadow: 1px 1px black;
+// 	span:nth-child(1){
+// 		color:lightblue;
+// 	}
+// 	span:nth-child(2){
+// 		color: orange;
+// 	}
+// }
+
+// @media only screen and (max-width: 1024px) {
+
+// 	#main-menu{
+// 		.a-button{
+// 			width:50%;
+// 	        font-size:150%;
+// 		}
+// 		.a-button:hover{
+// 			color:black;
+// 		    border-color: white;
+// 		    background-color: $blue;
+// 		}
+
+
+	    
+// 	}
+
+
+// }
+
+// @media only screen and (max-width: 768px) {
+
+// 	#main-menu{
+// 		.a-button{
+// 			width:50%;
+// 	        font-size:125%;
+// 	        margin:5% auto 5% auto;
+// 		}
+// 		.a-button:hover{
+// 			color:black;
+// 		    border-color: white;
+// 		    background-color: $blue;
+// 		}
+
+
+	    
+// 	}
+
+
+// }
+
+// @media only screen and (max-width: 560px) {
+
+// 	#main-menu{
+// 		.a-button{
+// 			width:50%;
+// 	        font-size:100%;
+// 	        margin:5% auto 5% auto;
+// 		}
+// 		.a-button:hover{
+// 			color:black;
+// 		    border-color: white;
+// 		    background-color: $blue;
+// 		}
+
+
+	    
+// 	}
+
+
+// }

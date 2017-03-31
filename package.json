@@ -1,0 +1,16 @@
+{
+  "name": "eztravel",
+  "version": "1.0.0",
+  "description": "HCI Project 2017",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "morgan": "^1.8.1"
+  }
+}
