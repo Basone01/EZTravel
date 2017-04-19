@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/css/font-awesome.css">
+    <link rel="stylesheet" href="public/css/style.css">
+    <title>
+        EZTravel
+    </title>
+    <style media="screen">
+
+        body{
+           background-image: url('public/img/wallpaper.jpg');
+           background-size:cover;
+           background-repeat: no-repeat;
+           background-attachment: fixed;
+        }
+    </style>
+</head>
+
+<body>
+    <%- include('navbar'); %>
+    <header id="home" class="landing">
+        <div class="landing-background">
+            <div class="landing-background-cover"></div>
+        </div>
+        <div class="landing-content abs box">
+            <div id="logo" class="abs-h-centered">
+                <h1>
+                    <span>EZ</span><span>Travel</span>
+                </h1>
+            </div>
+            <div class="landing-menu abs-h-centered content-line-center-space">
+                <a href="#quicktravel" class="scroll-link btn-border btn-border-main inline">Quick Travel</a>
+                <a href="/search" class="btn-border btn-border-main inline">Find Your Place</a>
+                <a href="#recommended" class="scroll-link btn-border btn-border-main inline">Recommended</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="wrapper">
+      <section id="quicktravel" class="section content-center">
+        <h1 class="text-bold text-centered flex-item-full">
+          <span>Quick </span><span>Travel</span>
+        </h1>
+        <form class="" action="/search" method="get">
+          <div class="content-line-center">
+            <input id="quicksearch" class="text-input round text-centered" type="text" name="place" value="" autocomplete="off" placeholder="Where do you want to go?"
+            >
+            <button type="submit" class="btn-icon text-large round"><span class=" fa fa-search"></span></button>
+          </div>
+        </form>
+        <div id="quickresult" class=""></div>
+      </section>
+
+
+
+      <section id="recommended" class="section content-stretch">
+        <h1 class="text-centered"><span>Recommended</span><span> Place</span></h1>
+        <div class="gallery">
+          <div class="gallery-block">
+              <figure style="background-image:url(<%=pic[0].img%>);background-position:center;background-size:cover;">
+                <!-- <img src="<%=pic[0].img%>" alt=""> -->
+                <figcaption><%=pic[0].caption%></figcaption>
+                <a href="<%=pic[0].link%>"><span></span></a>
+              </figure>
+          </div>
+          <div class="gallery-block">
+
+              <figure style="background-image:url(<%=pic[1].img%>);background-position:center;background-size:cover;">
+                <!-- <img src="<%=pic[1].img%>" alt=""> -->
+                <figcaption><%=pic[1].caption%></figcaption>
+                <a href="<%=pic[1].link%>"><span></span></a>
+              </figure>
+              <figure style="background-image:url(<%=pic[2].img%>);background-position:center;background-size:cover;">
+                <!-- <img src="<%=pic[2].img%>" alt=""> -->
+                <figcaption><%=pic[2].caption%></figcaption>
+                <a href="<%=pic[2].link%>"><span></span></a>
+              </figure>
+
+          </div>
+          <div class="gallery-block">
+              <figure style="background-image:url(<%=pic[3].img%>);background-position:center;background-size:cover;">
+                <!-- <img src="<%=pic[3].img%>" alt=""> -->
+                <figcaption><%=pic[3].caption%></figcaption>
+                <a href="<%=pic[3].link%>"><span></span></a>
+              </figure>
+              <figure style="background-image:url(<%=pic[4].img%>);background-position:center;background-size:cover;">
+                <!-- <img src="<%=pic[4].img%>" alt=""> -->
+                <figcaption><%=pic[4].caption%></figcaption>
+                <a href="<%=pic[4].link%>"><span></span></a>
+              </figure>
+              <figure style="background-image:url(<%=pic[5].img%>);background-position:center;background-size:cover;">
+                <!-- <img src="<%=pic[5].img%>" alt=""> -->
+                <figcaption><%=pic[5].caption%></figcaption>
+                <a href="<%=pic[5].link%>"><span></span></a>
+              </figure>
+              <figure style="background-image:url(<%=pic[6].img%>);background-position:center;background-size:cover;">
+                <!-- <img src="<%=pic[6].img%>" alt=""> -->
+                <figcaption><%=pic[6].caption%></figcaption>
+                <a href="<%=pic[6].link%>"><span></span></a>
+              </figure>
+          </div>
+        </div>
+
+      </section>
+      <%- include('footer')%>
+    </div>
+
+    <script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="styles/style.js"></script>
+</body>
+
+</html>

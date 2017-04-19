@@ -1,6 +1,12 @@
 :root{
 	font-size:16px;
 }
+
+h1,h2,h3,h4,h5,h6,p{
+	display: block;
+	margin: 0.75em;
+}
+
 h1{
 	font-size:2.5rem;
 }
@@ -18,4 +24,12 @@ h5{
 }
 h6{
 	font-size:0.65rem;
+}
+
+input[type="text"]{
+	background-color: white;
+	border: 2px grey solid;
+	&:active{
+		border-color: white;
+	}
 }

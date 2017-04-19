@@ -1,8 +1,21 @@
-$red : #FF9797;
-$lightblue:#90A0F0;
-$blue : #A4C8F0;
-$dark-blue : #a18cd1;
-$mainmenu-btn-font-color:black;
-$mainmenu-btn-bg-color:white;
-$mainmenu-btn-bg-color-active:#A4C8F0;
-$mainmenu-btn-border-color-active:white;
+$color-main:orange;
+$color-hover:white;
+$color-active:black;
+
+$section-min-height:640px;
+$landing-min-height:360px;
+
+
+
+
+//flex variables
+$flex-item-large: 480px;
+$flex-item-medium: 320px;
+$flex-item-small: 160px;
+
+//screenbreak
+$screen-break-sm:800px;
+$screen-break-md:1080px;
+$screen-break-lg:1280px;
+//quicksearch
+$quicksearch-width:640px;

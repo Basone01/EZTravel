@@ -2,11 +2,14 @@
 div#logo{
 	position:absolute;
 	top:15%;
+
 	h1{
 		font-family: 'Pacifico';
 		font-size:7.5rem;
 		text-shadow: 0.0625em 0.0625em black;
 		padding-right:0.2em;
+		margin-top: 5vh;
+		user-select:none;
 		span:nth-child(1){
 			color:lightblue;
 		}
@@ -14,115 +17,15 @@ div#logo{
 			color:orange;
 		}
 	}
-	
+
 }
 
 
-// #logo{
-// 	display:block;
-//     font-family: 'Pacifico';
-//     min-width: 200px;
-//     font-size: 750%;
-//     padding: 2%;
-// 	text-shadow: 5px 5px black;
-// 	margin-top: 10vh;
-// 	margin-bottom: 5vh;	
-// 	span:nth-child(1){
-// 		color:lightblue;
-// 	}
-// 	span:nth-child(2){
-// 		color: orange;
-// 	}
-// }
-// #main-menu{
-// 	display:block;
-// 	height:auto;
-// 	width:90%;
-// }
 
-// #quick-travel{
-// 	padding-top:50px;
-// 	padding-bottom: 50px;
-// 	background-color:$lightblue;
-// 	input[type="text"]	{
-// 		text-align:center;
-// 		min-width:200px;
-// 		min-height:40px;
-// 		font-size:30px;
-// 		border-radius: 30px;
-// 		padding:5px 10px;
-// 	}
-// 	button[type="submit"]{
-// 		background:none;
-// 		border: none;
-// 		font-size: 30px;
-// 		margin-left: 10px;
-// 		cursor: pointer;
-// 	}
-// 	button[type="submit"]:hover{
-// 		color:white;
-// 	}
-	
-// }
+div#quickresult{
+	overflow-y: auto;
+	max-height: 300px;
+	height: 300px;
+	width: $quicksearch-width;
 
-// #find-your-place{
-// 	padding-top:50px;
-// 	padding-bottom: 50px;
-// 	background-color:grey;
-// 	.filter{
-// 		position:relative;
-// 		border: 1px black solid;
-// 		overflow: auto;
-// 	}
-// 	input[type="text"]	{
-// 		text-align:center;
-// 		min-height:20px;
-// 		font-size:20px;
-// 		border-radius: 20px;
-// 		padding:5px 5px;
-// 		width:80%;
-// 	}
-// 	.accomodation{
-// 		span{
-// 			h4{
-// 				display:inline;
-// 			}
-// 			text-align:left;	
-// 			display:inline-block;
-// 			width:35%;
-// 		}
-// 	}
-// 	.price{
-// 		input[type="number"]{
-// 			width:20%;
-// 			height:30px;
-// 			font-size:20px;
-// 		}
-// 	}
-// 	.h-three{
-// 		padding:5px 1%;
-// 		position: relative;
-// 		display:inline-block;
-// 		margin-right:1px;
-// 		border-right: 1px black solid;
-// 		min-height:280px;
-// 		height:100%;
-// 		float:left;
-// 	}
-// 	.h-three:nth-child(3){
-// 		border-right:none;
-// 	}
-
-// }
-
-
-// @media only screen and (max-width: 768px) {
-// 	#logo{
-// 		font-size: 500%;
-// 		margin-bottom: 10vh;
-// 	}
-// 	#main-menu{
-// 		width:60%;
-// 		margin:0 auto;
-// 	}
-// }
+}

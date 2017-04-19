@@ -1,0 +1,55 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="public/css/font-awesome.css">
+  <link rel="stylesheet" href="public/css/style.css">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>EZTravel</title>
+  <style media="screen">
+
+      body{
+         background-image: url('public/img/wallpaper.jpg');
+         background-size:cover;
+         background-repeat: no-repeat;
+         background-attachment: fixed;
+      }
+  </style>
+</head>
+<body>
+  <%-include('navbar')%>
+  <div class="wrapper">
+
+    <section class="section content-stretch">
+
+      <%if(search){%>
+      <% datas.forEach(function(data){ %>
+          <h1 style="color:orange;"><%= data.name %></h1>
+      <% }); }%>
+    </section>
+
+  </div>
+
+
+  <script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js">
+
+  </script>
+  <script type="text/javascript">
+  jQuery(document).ready(function($) {
+    $('.scroll-link').click(function() {
+      /* Act on the event */
+      event.preventDefault();
+      window.location.href="/"+$(this).attr('href');;
+
+
+
+    });
+  });
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>QuickTravel</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+ 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/_flexbox.css" type="text/css">
+  <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+</head>
+<body>
+  <!--QUICK TRAVEL LOGO-->
+  <div class="flex-container">
+    <h1 class="bigChar">Quick<span class="bigChar-child"> | Travel </span></h1>
+  </div>
+
+  <!--Searching Province -->
+  <div id="searchBar">
+	  <form role="form">
+        <div>
+          <input type="input" id="txt-search" placeholder="ค้นหาจังหวัด">
+        </div>
+	  </form>
+    <div><h3>RECOMMEND HOTEL/RESORT</h3></div>
+	  <div id="filter-records" style="width: 60%; height: 50px"></div>
+  </div>
+
+
+
+
+<!--SEARCH ENGINE -->
+  <script type="text/javascript">
+    $(document).ready(function(){
+  	$('#header').load('../header-ads.html');
+  $('#footer').load('../footer-ads.html');
+
+  var data =
+  [{"provinceName":"ระยอง"},
+  {"provinceName":"กรุงเทพ"},
+  {"provinceName":"ชลบุรี"},
+  {"provinceName":"ชุมพร"},
+  {"provinceName":"ระนอง"},
+  {"provinceName":"ตรัง"},
+  {"provinceName":"พังงา"},
+  {"provinceName":"ภูเก็ต"},
+  {"provinceName":"กระบี่"},
+  {"provinceName":"มหาสารคาม"},
+  {"provinceName":"อุบลราชธานี"},
+  {"provinceName":"ร้อยเอ็ด"},
+  {"provinceName":"เชียงใหม่"},
+  {"provinceName":"กาญจนบุรี"},
+  {"provinceName":"เลย"},
+  {"provinceName":"หนองคาย"},
+  {"provinceName":"แพร่"},
+  {"provinceName":"ยะลา"},
+  {"provinceName":"เชียงราย"},
+  {"provinceName":"น่าน"}];
+
+  $('#txt-search').keyup(function(){
+              var searchField = $(this).val();
+  			if(searchField === '')  {
+  				$('#filter-records').html('');
+  				return;
+  			}
+
+              var regex = new RegExp(searchField, "i");
+              var output = '<div class="row">';
+              var count = 1;
+  			  $.each(data, function(key, val){
+  				if ((val.provinceName.search(regex) != -1)) {
+  				  output += '<div class="col-md-6 well">';
+  				  output += '<div class="col-md-7">';
+  				  output += '<h5>' + val.provinceName + '</h5>';
+  				  output += '</div>';
+  				  output += '</div>';
+  				  if(count%2 == 0){
+  					output += '</div><div class="row">'
+  				  }
+  				  count++;
+  				}
+  			  });
+  			  output += '</div>';
+  			  $('#filter-records').html(output);
+      });
+    });
+  </script>
+<!--SEARCH ENGINE -->
+</body>
+</html>
