@@ -2,10 +2,12 @@ nav.nav{
   display: flex;
   width: 100%;
   min-width: 1024px;
+  max-width: 1920px;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding-right: 1.5em;
+  transition: all 1s;
   .nav-logo{
     flex-basis: 10%;
     h1{
@@ -27,13 +29,14 @@ nav.nav{
         text-decoration: none;
         padding: 1em;
         text-transform: uppercase;
+        text-shadow: 0 0 0.25em $orange;
         transition: all 0.5s;
         color: inherit;
         &:visited{
           color: inherit;
         }
         &:hover{
-          color: orange;
+          color: $orange;
         }
       }
     }
@@ -41,5 +44,5 @@ nav.nav{
 }
 nav.nav-fixed{
   position: fixed!important;
-  background-color: rgba(150 , 220, 250, 0);
+  background-color: rgba(150 , 220, 250, 0.35);
 }

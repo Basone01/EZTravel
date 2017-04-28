@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,800,800i');
+@import url("font-awesome.css");
+@import "variable";
 @import "root";
 @import "element";
 @import "nav";
 @import "home";
+@import "star-rate";
 
 .logo-color{
   font-style: italic;
@@ -10,20 +13,20 @@
   span{
     transition: all 0.5s;
     &:nth-child(1){
-    color: lightblue;
+    color: $blue;
     }
     &:nth-child(2){
-    color: orange;
+    color: $dark-orange;
     }
   }
   a:hover{
     text-shadow: 0.05em 0.05em 0.2em black;
     span{
       &:nth-child(1){
-      color: orange;
+      color: $dark-orange;
       }
       &:nth-child(2){
-      color: lightblue;
+      color: $blue;
       }
     }
   }
@@ -57,7 +60,13 @@
   font-weight: bolder;
   padding: 1em 1.5em;
   border-radius: 1.25em;
-  background-color: lightblue;
+  background-color: $blue;
+  transition: box-shadow 0.5s;
+  transition: background 0.5s;
+  &:hover{
+    box-shadow: 0 0 0.5em black;
+    background-color: $dark-blue;
+  }
 }
 .btn-md{
   width: 12em;

@@ -1,7 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,800,800i");
+@import url("font-awesome.css");
 :root {
   font-size: 16px;
   font-family: 'Raleway';
+}
+
+@media (min-width: 1600px) and (max-width: 1919px) {
+  :root {
+    font-size: 20px;
+  }
 }
 
 @media (min-width: 1920px) {
@@ -15,18 +22,24 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-  color: black;
+  color: #313131;
 }
 
 body {
   min-width: 1024px;
+  max-width: 1920px;
 }
 
 input[type="text"] {
   padding: 0.3em;
   line-height: 1.25rem;
   text-indent: 0.5em;
-  width: 15rem;
+  width: 18rem;
+}
+
+ul li {
+  list-style: none;
+  text-align: left;
 }
 
 nav.nav {
@@ -35,6 +48,7 @@ nav.nav {
   display: flex;
   width: 100%;
   min-width: 1024px;
+  max-width: 1920px;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
@@ -45,6 +59,7 @@ nav.nav {
   -ms-flex-align: center;
   align-items: center;
   padding-right: 1.5em;
+  transition: all 1s;
 }
 
 nav.nav .nav-logo {
@@ -85,6 +100,7 @@ nav.nav ul li a {
   text-decoration: none;
   padding: 1em;
   text-transform: uppercase;
+  text-shadow: 0 0 0.25em #fed1be;
   transition: all 0.5s;
   color: inherit;
 }
@@ -94,16 +110,16 @@ nav.nav ul li a:visited {
 }
 
 nav.nav ul li a:hover {
-  color: orange;
+  color: #fed1be;
 }
 
 nav.nav-fixed {
   position: fixed !important;
-  background-color: rgba(150, 220, 250, 0);
+  background-color: rgba(150, 220, 250, 0.35);
 }
 
 #home {
-  background-image: url("../img/back.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../img/back.jpg");
   background-size: cover;
   background-position: center;
   display: -webkit-flex;
@@ -170,18 +186,296 @@ nav.nav-fixed {
 }
 
 #quicktravel input[type="text"] {
+  width: 32rem;
+  text-indent: 1rem;
+  line-height: 2rem;
   margin: 0 auto;
   transition: all 0.5s;
 }
 
 #quicktravel input[type="text"]:focus {
-  width: 32rem;
   outline: none;
   box-shadow: 0em 0em 0.3em #72bcd4;
 }
 
-#quicktravel input[type="text"] + a {
-  font-size: 1.5rem;
+#submitsearch {
+  cursor: pointer;
+}
+
+#submitsearch i {
+  font-size: 2.4rem;
+  -webkit-transform: translateY(0.2em);
+  -ms-transform: translateY(0.2em);
+  transform: translateY(0.2em);
+}
+
+#quickresult {
+  width: 18rem;
+  display: none;
+  max-height: 20rem;
+  overflow-y: auto;
+  transition: all 0.5s;
+}
+
+#quickresult.span {
+  width: 32rem;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#findyourplace .form-box {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+#findyourplace .form-box .col-1-3 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-height: 18rem;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  border: 0.15rem solid black;
+  border-right: none;
+}
+
+#findyourplace .form-box .col-1-3:first-child {
+  border-top-left-radius: 1em;
+  border-bottom-left-radius: 1em;
+}
+
+#findyourplace .form-box .col-1-3:last-child {
+  border-right: 0.15rem solid black;
+  border-top-right-radius: 1em;
+  border-bottom-right-radius: 1em;
+}
+
+#findyourplace .form-box .col-1-3 .form-block {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 1.5rem;
+}
+
+#findyourplace .form-box .col-1-3 .form-block .head {
+  margin-top: 1rem;
+  border-top: 0.2rem solid black;
+}
+
+#findyourplace .form-box .col-1-3 .form-block .head h3 {
+  -webkit-transform: translateY(-1.5em);
+  -ms-transform: translateY(-1.5em);
+  transform: translateY(-1.5em);
+}
+
+#findyourplace .form-box .col-1-3 .form-block .headingbox {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding-left: 1rem;
+}
+
+#findyourplace .form-box .col-1-3 .form-block#Accomodation .headingbox {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+#findyourplace .form-box .col-1-3 .form-block#Accomodation .headingbox label {
+  text-align: left;
+  -webkit-flex-basis: 9rem;
+  -ms-flex-preferred-size: 9rem;
+  flex-basis: 9rem;
+}
+
+#findyourplace .form-box .col-1-3 .form-block#price {
+  -webkit-flex-grow: 2;
+  -ms-flex-positive: 2;
+  flex-grow: 2;
+}
+
+#findyourplace .form-box .col-1-3 .form-block#grade .headingbox label.star-rate.rightside > input[type='radio'] + span::after {
+  font-family: FontAwesome;
+  content: "\f005";
+  color: red;
+}
+
+#findyourplace .form-box .col-1-3 .form-block#grade .headingbox label.star-rate.leftside > input[type='radio'] + span::after {
+  font-family: FontAwesome;
+  position: absolute;
+  content: "\f089";
+  color: red;
+}
+
+#findyourplace .form-box .col-1-3 .form-block#grade .headingbox label.star-rate.rightside > input[type='radio']:checked + span::after {
+  font-family: FontAwesome;
+  content: "\f005";
+  color: blue;
+}
+
+#findyourplace .form-box .col-1-3 .form-block#grade .headingbox label.star-rate.leftside > input[type='radio']:checked + span::after {
+  font-family: FontAwesome;
+  position: absolute;
+  content: "\f089";
+  color: blue;
+}
+
+#findyourplace .form-box .col-1-3 .form-block#grade .headingbox label.star-rate > input[type='radio']:checked ~ label.star-rate > input[type="radio"] + span::after {
+  font-family: FontAwesome;
+  content: "\f005";
+  color: blue;
+}
+
+#findyourplace .form-box .col-1-3 .form-block#grade .headingbox label.star-rate > input[type='radio']:checked + span::after {
+  font-family: FontAwesome;
+  position: absolute;
+  content: "\f089";
+  color: blue;
+}
+
+#findyourplace .form-box .col-1-3 .form-block#facility {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+#findyourplace .form-box .col-1-3 .form-block#facility .headingbox {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 85%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+.quicksearch-list {
+  width: 100%;
+}
+
+.quicksearch-list .list-item {
+  width: 100%;
+  height: 2.5rem;
+}
+
+.quicksearch-list .list-item a {
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  border: 0.1em solid #3a9fc0;
+  background-color: #e8f4f8;
+  border-radius: 0.25em;
+  transition: all 0.25s;
+}
+
+.quicksearch-list .list-item a:hover {
+  background-color: #ffdb99;
+  border-color: #664200;
+}
+
+.quicksearch-list .list-item a span {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.rating {
+  border: none;
+  float: left;
+}
+
+.rating > input {
+  display: none;
+}
+
+.rating > label:before {
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating > .half:before {
+  content: "\f089";
+  position: absolute;
+}
+
+.rating > label {
+  color: #ddd;
+  float: right;
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+.rating > input:checked ~ label,
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+  color: #FFD700;
+}
+
+/* hover previous stars in list */
+.rating > input:checked + label:hover,
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label,
+.rating > input:checked ~ label:hover ~ label {
+  color: #FFc000;
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+.rating > input:checked ~ label,
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+  color: #FFD700;
+}
+
+/* hover previous stars in list */
+.rating > input:checked + label:hover,
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label,
+.rating > input:checked ~ label:hover ~ label {
+  color: #FFc000;
 }
 
 .logo-color {
@@ -194,11 +488,11 @@ nav.nav-fixed {
 }
 
 .logo-color span:nth-child(1) {
-  color: lightblue;
+  color: #abe1fd;
 }
 
 .logo-color span:nth-child(2) {
-  color: orange;
+  color: #fd9c73;
 }
 
 .logo-color a:hover {
@@ -206,11 +500,11 @@ nav.nav-fixed {
 }
 
 .logo-color a:hover span:nth-child(1) {
-  color: orange;
+  color: #fd9c73;
 }
 
 .logo-color a:hover span:nth-child(2) {
-  color: lightblue;
+  color: #abe1fd;
 }
 
 .text-large {
@@ -246,7 +540,14 @@ nav.nav-fixed {
   font-weight: bolder;
   padding: 1em 1.5em;
   border-radius: 1.25em;
-  background-color: lightblue;
+  background-color: #abe1fd;
+  transition: box-shadow 0.5s;
+  transition: background 0.5s;
+}
+
+.btn:hover {
+  box-shadow: 0 0 0.5em black;
+  background-color: #60c6fb;
 }
 
 .btn-md {

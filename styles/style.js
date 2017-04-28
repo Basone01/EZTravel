@@ -1,16 +1,62 @@
 $(document).ready(function() {
+// nav scroll
+  $(document).scroll(function(event) {
+    var top=$(this).scrollTop();
+    if(top>0){
+      $('nav.nav').addClass('nav-fixed');
+    }else{
+      $('nav.nav').removeClass('nav-fixed');
+    }
 
-  $('.scroll-link').click(function() {
-    /* Act on the event */
-    event.preventDefault();
-    var target = $($(this).attr('href')).offset().top;
-
-
-    $('body').stop(true, false).animate({scrollTop:target}, {duration:500},"easeInExpo");
   });
 
+  // sumbit quicksearch
+  $('#submitsearch').click(function(event) {
+    event.preventDefault();
+    var text=$('#quicksearch').val();
+    if(text!=''){
+      window.location.href="/search?keyword="+text;
+    }else{
+      alert("Please type your keyword to let us find it for you.")
+    }
+
+  });
+// click and scroll
+  $('.a-link').click(function() {
+    event.preventDefault();
+    var target = $($(this).attr('href')).offset().top;
+    $('body').stop(true, false).animate(
+      {scrollTop:target},
+      {duration:500},
+      "easeInExpo"
+    );
+  });
+
+// quicksearch display result
+
+  $("#quicksearch").focusin(function(event) {
+    var dis=$("#quickresult");
+    var input=$(this);
+    input.addClass('span');
+    setTimeout(function(){
+      if(input.hasClass('span'))
+      dis.addClass('span');
+    },500);
+
+  });
+  $("#quicksearch").focusout(function(event) {
+    var dis=$("#quickresult");
+    var input=$(this);
+    if(input.val()==''){
+      dis.removeClass('span');
+      input.removeClass('span');
+    }
+
+  });
+
+// quicksearch auto suggest
+
   $("#quicksearch").keyup(function(event) {
-    /* Act on the event */
     var place = $(this).val();
     var target = $("#quickresult");
     if (place!='') {
@@ -23,31 +69,29 @@ $(document).ready(function() {
       .done(function(response) {
         target.html('');
         var res='';
-        res+='<ul class="list">';
+        res+='<ul class="quicksearch-list">';
           for (var i = 0; i < response.length; i++) {
-            res+="<li class='list-item'> <a class='list-suggest-item' to="+response[i].name+">"+response[i].name+" , จังหวัด : "+response[i].province+"</a></li>";
+            res+="<li class='list-item'> <a href=\"\" class='list-suggest-item' to="
+            +response[i].name+"><span>"
+            +response[i].name+"</span> <span>จังหวัด : "
+            +response[i].province
+            +"</span></a></li>";
         }
         res+='</ul>';
         target.html(res);
-        $(".list-suggest-item").click(function(event) {
+        $(".list-item a").click(function(event) {
           /* Act on the event */
           window.location.href="/search?place="+$(this).attr('to');
-
-
         });
-        console.log("result");;
 
         })
       .fail(function() {
         console.log("error");
-      })
-      .always(function() {
-        console.log("complete");
       });
     }else{
       target.html('');
     }
-
-
   });
+
+
 });
