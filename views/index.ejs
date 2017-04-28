@@ -10,21 +10,16 @@
         EZTravel
     </title>
     <style media="screen">
-      fieldset{
-        border:2px solid black;
-      }
-      figure{
-        border: 2px solid red;
-      }
+
     </style>
 </head>
 
 <body>
 
-  <header id="home">
-    <nav class="nav">
+  <header id="home" class="main-content">
+    <nav class="nav nav-fixed">
       <div class="nav-logo">
-        <h1 class="logo-color"><a href="/#home"><span>ez</span><span>Travel</span></a></h1>
+        <h1 class="logo-color"><a href="/#home"><span>EZ</span><span>Travel</span></a></h1>
       </div>
       <ul>
         <li><a href="/#quicktravel">Quick Travel</a></li>
@@ -35,29 +30,28 @@
         <li><a href="">Sign Up</a></li>
       </ul>
     </nav>
-    <div>
-      <h1 class="logo-colour"><span>ez</span><span>Travel</span></h1>
-    </div>
+
+    <h1 class="logo-color text-large text-centered"><span>EZ</span><span>Travel</span></h1>
     <div class="main-menubar">
-      <a href="" class="btn">QUICK TRAVEL</a>
-      <a href="" class="btn">CUSTOM</a>
-      <a href="" class="btn">RECOMMENDED</a>
+      <a href="/#quicktravel" class="btn btn-md space-around-sm">QUICK TRAVEL</a>
+      <a href="/#findyourplace" class="btn btn-md space-around-sm">FIND by DETAILS</a>
+      <a href="/#recommended" class="btn btn-md space-around-sm">RECOMMENDED</a>
     </div>
   </header>
 
-  <section id="quicktravel">
+  <section class="main-content" id="quicktravel">
     <div>
-      <h1 class="logo-colour"><span>QUICK</span> <span>TRAVEL</span></h1>
+      <h1 class="logo-color text-large text-centered"><span>QUICK</span> <span>TRAVEL</span></h1>
     </div>
-    <form action="">
-      <input type="text" id="quicksearch" placeholder="Let's Find!!">
-      <button id="submitsearch" type="submit"><i class="fa fa-search">  </i></button>
+    <form class="full-form" action="">
+      <input class="rounded-border" type="text" id="quicksearch" placeholder="Let's Find!!">
+      <a id="submitsearch" type="submit"><i class="fa fa-search">  </i></a>
     </form>
   </section>
 
-  <section id="findyourplace">
+  <section class="main-content" id="findyourplace">
     <div>
-      <h1 class="logo-colour"><span>FIND</span> <span>YOUR PLACE</span></h1>
+      <h1 class="logo-color text-large text-centered"><span>FIND</span> <span>YOUR PLACE</span></h1>
     </div>
 
     <form class="full-form" action="index.html" method="post">
@@ -136,9 +130,9 @@
     </form>
   </section>
 
-  <section id="recommended">
+  <section class="main-content" id="recommended">
     <div>
-      <h1 class="logo-colour"><span>RECOMMENDED</span> <span>PLACE</span></h1>
+      <h1 class="logo-color text-large text-centered"><span>RECOMMENDED</span> <span>PLACE</span></h1>
     </div>
     <div class="gallery">
       <div class="gallery-1">
