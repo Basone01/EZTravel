@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="public/css/font-awesome.css"> -->
     <link rel="stylesheet" href="public/css/style.css">
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <title>
         EZTravel
     </title>
@@ -16,7 +15,7 @@
 
 <body>
 
-  <header id="home" class="main-content">
+  <header id="home" class="main-content screen-height">
     <nav class="nav">
       <div class="nav-logo">
         <h1 class="logo-color"><a class="a-link" href="#home"><span>EZ</span><span>Travel</span></a></h1>
@@ -39,7 +38,7 @@
     </div>
   </header>
 
-  <section class="main-content" id="quicktravel">
+  <section class="main-content screen-height" id="quicktravel">
     <div>
       <h1 class="logo-color text-large text-centered"><span>QUICK</span> <span>TRAVEL</span></h1>
     </div>
@@ -50,7 +49,7 @@
     <div id="quickresult"></div>
   </section>
 
-  <section class="main-content" id="findyourplace">
+  <section class="main-content screen-height" id="findyourplace">
     <div>
       <h1 class="logo-color text-large text-centered"><span>FIND</span> <span>YOUR PLACE</span></h1>
     </div>
@@ -87,8 +86,16 @@
             <div class="form-block"  id="price">
               <div class="head"><h3>Price</h3></div>
               <div class="headingbox">
-                <input type="range" min="0" max="20000" value="0">
-                <h4 id="price-display">0-0 Baht</h4>
+                <input  type="range" id="minprice" class="styled-range" min="200" max="20000" value="200" step="50" style="width:100%;">
+                <div class="text-centered" style="display:block;">
+                  <label class="inline"><input class="range-display rounded-border" id="minprice-display" type="number" name="price"
+                    value="200" step="50" min="200" max="20000" style="width:4rem;text-indent:0.6rem;"> -</label>
+                  <label class="inline"><input class="range-display rounded-border" id="maxprice-display" type="number" name="price"
+                    value="20000" step="50" min="200" max="20000" style="width:4rem;text-indent:0.6rem;"> Baht</label>
+                </div>
+                <input  type="range" id="maxprice" class="styled-range" min="200" max="20000" value="20000" step="50" style="width:100%;">
+
+
               </div>
             </div>
             <div class="form-block"  id="grade">
@@ -115,66 +122,75 @@
             <div class="form-block"  id="facility">
               <div class="head"><h3>Facility</h3></div>
               <div class="headingbox">
-                <label><input type="checkbox" name="facility">WIFI</label>
-                <label><input type="checkbox" name="facility">Fitness</label>
-                <label><input type="checkbox" name="facility">Swimming Pool</label>
-                <label><input type="checkbox" name="facility">Restaurant</label>
-                <label><input type="checkbox" name="facility">Park</label>
-                <label><input type="checkbox" name="facility">Night Club</label>
+                <label><input type="checkbox" name="facility"> WIFI</label>
+                <label><input type="checkbox" name="facility"> Fitness</label>
+                <label><input type="checkbox" name="facility"> Swimming Pool</label>
+                <label><input type="checkbox" name="facility"> Restaurant</label>
+                <label><input type="checkbox" name="facility"> Park</label>
+                <label><input type="checkbox" name="facility"> Night Club</label>
               </div>
             </div>
 
           </div>
 
         </div>
+        <div id="form-submit">
+          <button type="submit" name="button">GO!!</button>
+        </div>
       </div>
     </form>
   </section>
 
-  <section class="main-content" id="recommended">
+  <section class="main-content screen-height" id="recommended">
     <div>
       <h1 class="logo-color text-large text-centered"><span>RECOMMENDED</span> <span>PLACE</span></h1>
     </div>
     <div class="gallery">
       <div class="gallery-1">
-        <figure>
-          <figcaption></figcaption>
-        </figure>
-        <figure>
-          <figcaption></figcaption>
-        </figure>
+        <div class="gallery-item">
+          <img src="<%=pic[0].img%>" alt="<%=pic[0].caption%>" class="gallery-img">
+          <a href="<%=pic[0].link%>" class="img-overlay"><h1><span><%=pic[0].caption%></span></h1></a>
+        </div>
+        <div class="gallery-item">
+          <img src="<%=pic[1].img%>" alt="<%=pic[1].caption%>" class="gallery-img">
+          <a href="<%=pic[1].link%>" class="img-overlay"><h1><span><%=pic[1].caption%></span></h1></a>
+        </div>
       </div>
       <div class="gallery-2">
-        <div class="gallery-2-2">
-          <figure>
-            <figcaption></figcaption>
-          </figure>
-          <figure>
-            <figcaption></figcaption>
-          </figure>
+        <div class="gallery-item">
+          <img src="<%=pic[2].img%>" alt="<%=pic[2].caption%>" class="gallery-img">
+          <a href="<%=pic[2].link%>" class="img-overlay"><h1><span><%=pic[2].caption%></span></h1></a>
         </div>
-        <figure>
-          <figcaption></figcaption>
-        </figure>
-        <figure>
-          <figcaption></figcaption>
-        </figure>
+        <div class="gallery-item">
+          <img src="<%=pic[3].img%>" alt="<%=pic[3].caption%>" class="gallery-img">
+          <a href="<%=pic[3].link%>" class="img-overlay"><h1><span><%=pic[3].caption%></span></h1></a>
+        </div>
+        <div class="gallery-item">
+          <img src="<%=pic[4].img%>" alt="<%=pic[4].caption%>" class="gallery-img">
+          <a href="<%=pic[4].link%>" class="img-overlay"><h1><span><%=pic[4].caption%></span></h1></a>
+        </div>
+
       </div>
       <div class="gallery-3">
-        <figure>
-          <figcaption></figcaption>
-        </figure>
-        <figure>
-          <figcaption></figcaption>
-        </figure>
+        <div class="gallery-item">
+          <img src="<%=pic[5].img%>" alt="<%=pic[5].caption%>" class="gallery-img">
+          <a href="<%=pic[5].link%>" class="img-overlay"><h1><span><%=pic[5].caption%></span></h1></a>
+        </div>
+        <div class="gallery-item">
+          <img src="<%=pic[6].img%>" alt="<%=pic[6].caption%>" class="gallery-img">
+          <a href="<%=pic[6].link%>" class="img-overlay"><h1><span><%=pic[6].caption%></span></h1></a>
+        </div>
       </div>
     </div>
   </section>
-
+  
   <script
     src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous">
+  </script>
+  <script type="text/javascript" src="styles/rangeslider.js">
+
   </script>
   <script type="text/javascript" src="styles/style.js">
 

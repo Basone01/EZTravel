@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
 // nav scroll
   $(document).scroll(function(event) {
@@ -92,6 +93,9 @@ $(document).ready(function() {
       target.html('');
     }
   });
+
+
+
 
 
 });

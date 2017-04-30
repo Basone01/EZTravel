@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,800,800i');
 @import url('https://fonts.googleapis.com/css?family=Fredoka+One');
+@import url('https://fonts.googleapis.com/css?family=Sriracha');
 @import url("font-awesome.css");
 @import "variable";
 @import "root";
@@ -7,9 +8,10 @@
 @import "nav";
 @import "home";
 @import "star-rate";
-
+@import "rangeslider";
 .logo-color{
   font-style: italic;
+  font-family: "Fredoka One";
   text-shadow: 0.05em 0.05em 0.1em black;
   span{
     transition: all 0.5s;
@@ -45,6 +47,8 @@
 .main-content{
   padding: 4em 2em 2em 2em;
   width: 100%;
+}
+.screen-height{
   height: 100vh;
   min-height: 640px;
 }
@@ -57,18 +61,21 @@
 }
 .btn{
   display: inline-block;
+  position: relative;
   text-align: center;
   font-weight: bolder;
-  padding: 1em 1.5em;
+  padding: 0.25em 0.75em;
   border-radius: 1.25em;
-  background-color: $blue;
+   background-color: rgba(0,0,0,0.25);
+  border:0.15em solid $blue;
   box-shadow: 0 0 0.5em $black;
   transition: all 0.5s;
-
+  color: $blue;
   &:hover{
     box-shadow: 0 0 0.75em black;
-    background-color: $dark-blue;
+    background-color: rgba(171, 225, 253, 0.025);
   }
+
 }
 .btn-md{
   width: 12em;
@@ -76,4 +83,10 @@
 // ---------------------------------------
 .rounded-border{
   border-radius: 1.5em;
+}
+.inline{
+  display: inline-flex;
+}
+.flex{
+  flex: 1;
 }
