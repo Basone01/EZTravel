@@ -16,19 +16,7 @@
 <body>
 
   <header id="home" class="main-content screen-height">
-    <nav class="nav">
-      <div class="nav-logo">
-        <h1 class="logo-color"><a class="a-link" href="#home"><span>EZ</span><span>Travel</span></a></h1>
-      </div>
-      <ul>
-        <li><a class="a-link" href="#quicktravel">Quick Travel</a></li>
-        <li><a class="a-link" href="#findyourplace">Find Your Place</a></li>
-        <li><a class="a-link" href="#recommended">Recommended</a></li>
-        <li><a class="a-link" href="#aboutus">About Us</a></li>
-        <li><a class="a-link" href="">Sign In</a></li>
-        <li><a class="a-link" href="">Sign Up</a></li>
-      </ul>
-    </nav>
+    <%-include('navbar')%>
 
     <h1 class="logo-color text-large text-centered"><span>EZ</span><span>Travel</span></h1>
     <div class="main-menubar">
@@ -183,7 +171,7 @@
       </div>
     </div>
   </section>
-  
+  <%- include('footer') %>
   <script
     src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="

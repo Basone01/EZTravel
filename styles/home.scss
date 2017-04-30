@@ -216,7 +216,7 @@
 }
 
 #recommended{
-
+  height: auto;
   .gallery{
     display: flex;
     flex-direction: column;
@@ -308,6 +308,20 @@
       .gallery-item:last-child{
         flex-grow: 4;
       }
+    }
+  }
+}
+#aboutus{
+  #team{
+    border:10px rgba(255,255,255,0.7) solid;
+    background-color:rgba(255,255,255,0.7);
+    padding:5rem;
+    margin: 2rem 4rem;
+    text-align: center;
+    h3{
+      text-align: left;
+      margin-left: 35%;
+
     }
   }
 }

@@ -137,6 +137,7 @@ nav.nav ul li a:hover:after {
 
 nav.nav-fixed {
   position: fixed !important;
+  z-index: 10;
   background-color: rgba(0, 0, 0, 0.35);
 }
 
@@ -444,6 +445,10 @@ nav.nav-fixed {
   flex: 1;
 }
 
+#recommended {
+  height: auto;
+}
+
 #recommended .gallery {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -585,6 +590,19 @@ nav.nav-fixed {
   -webkit-flex-grow: 4;
   -ms-flex-positive: 4;
   flex-grow: 4;
+}
+
+#aboutus #team {
+  border: 10px rgba(255, 255, 255, 0.7) solid;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 5rem;
+  margin: 2rem 4rem;
+  text-align: center;
+}
+
+#aboutus #team h3 {
+  text-align: left;
+  margin-left: 35%;
 }
 
 .rating {
@@ -763,8 +781,10 @@ input[type=range].styled-range::-moz-range-thumb {
 }
 
 .btn:hover {
+  color: #fed1be;
+  border-color: #fed1be;
   box-shadow: 0 0 0.75em black;
-  background-color: rgba(171, 225, 253, 0.025);
+  background-color: rgba(0, 0, 0, 0.25);
 }
 
 .btn-md {

@@ -72,8 +72,10 @@
   transition: all 0.5s;
   color: $blue;
   &:hover{
+    color: $orange;
+    border-color: $orange;
     box-shadow: 0 0 0.75em black;
-    background-color: rgba(171, 225, 253, 0.025);
+    background-color: rgba(0, 0, 0, 0.25);
   }
 
 }
