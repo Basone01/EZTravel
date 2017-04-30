@@ -141,41 +141,41 @@
         }
         &#grade{
           .headingbox{
-            label.star-rate{
-              // before checked
-              &.rightside>input[type='radio']+span::after{
-                font-family: FontAwesome;
-                content: "\f005";
-                color:red;
-              }
-              &.leftside>input[type='radio']+span::after{
-                font-family: FontAwesome;
-                position: absolute;
-                content: "\f089";
-                color:red;
-              }
-              &.rightside>input[type='radio']:checked+span::after{
-                font-family: FontAwesome;
-                content: "\f005";
-                color:blue;
-              }
-              &.leftside>input[type='radio']:checked+span::after{
-                font-family: FontAwesome;
-                position: absolute;
-                content: "\f089";
-                color:blue;
-              }
-              &>input[type='radio']:checked~label.star-rate>input[type="radio"]+span::after{
-                font-family: FontAwesome;
-                content: "\f005";
-                color:blue;
-              }
-              &>input[type='radio']:checked+span::after{
-                font-family: FontAwesome;
-                position: absolute;
-                content: "\f089";
-                color:blue;
-              }
+            // label.star-rate{
+            //   // before checked
+            //   &.rightside>input[type='radio']+span::after{
+            //     font-family: FontAwesome;
+            //     content: "\f005";
+            //     color:red;
+            //   }
+            //   &.leftside>input[type='radio']+span::after{
+            //     font-family: FontAwesome;
+            //     position: absolute;
+            //     content: "\f089";
+            //     color:red;
+            //   }
+            //   &.rightside>input[type='radio']:checked+span::after{
+            //     font-family: FontAwesome;
+            //     content: "\f005";
+            //     color:blue;
+            //   }
+            //   &.leftside>input[type='radio']:checked+span::after{
+            //     font-family: FontAwesome;
+            //     position: absolute;
+            //     content: "\f089";
+            //     color:blue;
+            //   }
+            //   &>input[type='radio']:checked~label.star-rate>input[type="radio"]+span::after{
+            //     font-family: FontAwesome;
+            //     content: "\f005";
+            //     color:blue;
+            //   }
+            //   &>input[type='radio']:checked+span::after{
+            //     font-family: FontAwesome;
+            //     position: absolute;
+            //     content: "\f089";
+            //     color:blue;
+            //   }
               // &.rightside>input[type='radio']:checked+span::after{
               //   font-family: FontAwesome;
               //   content: "\f005";
@@ -193,7 +193,7 @@
               //   content: '\f005';
               //   color:black;
               // }
-            }
+            // }
           }
         }
         &#facility{
@@ -236,29 +236,4 @@
       }
     }
   }
-}
-
-.rating {
-  border: none;
-  float: left;
-}
-
-.rating > input { display: none; }
-.rating > label:before {
-  margin: 5px;
-  font-size: 1.25em;
-  font-family: FontAwesome;
-  display: inline-block;
-  content: "\f005";
-
-}
-
-.rating > .half:before {
-  content: "\f089";
-  position: absolute;
-}
-
-.rating > label {
-  color: #ddd;
- float: right;
 }

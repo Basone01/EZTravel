@@ -355,45 +355,6 @@ nav.nav-fixed {
   flex-grow: 2;
 }
 
-#findyourplace .form-box .col-1-3 .form-block#grade .headingbox label.star-rate.rightside > input[type='radio'] + span::after {
-  font-family: FontAwesome;
-  content: "\f005";
-  color: red;
-}
-
-#findyourplace .form-box .col-1-3 .form-block#grade .headingbox label.star-rate.leftside > input[type='radio'] + span::after {
-  font-family: FontAwesome;
-  position: absolute;
-  content: "\f089";
-  color: red;
-}
-
-#findyourplace .form-box .col-1-3 .form-block#grade .headingbox label.star-rate.rightside > input[type='radio']:checked + span::after {
-  font-family: FontAwesome;
-  content: "\f005";
-  color: blue;
-}
-
-#findyourplace .form-box .col-1-3 .form-block#grade .headingbox label.star-rate.leftside > input[type='radio']:checked + span::after {
-  font-family: FontAwesome;
-  position: absolute;
-  content: "\f089";
-  color: blue;
-}
-
-#findyourplace .form-box .col-1-3 .form-block#grade .headingbox label.star-rate > input[type='radio']:checked ~ label.star-rate > input[type="radio"] + span::after {
-  font-family: FontAwesome;
-  content: "\f005";
-  color: blue;
-}
-
-#findyourplace .form-box .col-1-3 .form-block#grade .headingbox label.star-rate > input[type='radio']:checked + span::after {
-  font-family: FontAwesome;
-  position: absolute;
-  content: "\f089";
-  color: blue;
-}
-
 #findyourplace .form-box .col-1-3 .form-block#facility {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -463,6 +424,10 @@ nav.nav-fixed {
   font-family: FontAwesome;
   display: inline-block;
   content: "\f005";
+}
+
+.rating > label.full:before {
+  text-shadow: 0 0 0.5em black;
 }
 
 .rating > .half:before {
