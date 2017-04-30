@@ -1,6 +1,6 @@
 :root{
   font-size: 16px;
-  font-family: 'Raleway';
+  font-family: 'Fredoka One';
   @media(min-width: 1600px)and(max-width: 1919px){
     font-size: 20px;
   }
@@ -19,4 +19,9 @@
 body{
   min-width: 1024px;
   max-width: 1920px;
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("../img/back2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }

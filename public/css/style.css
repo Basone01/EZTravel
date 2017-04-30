@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,800,800i");
+@import url("https://fonts.googleapis.com/css?family=Fredoka+One");
 @import url("font-awesome.css");
 :root {
   font-size: 16px;
-  font-family: 'Raleway';
+  font-family: 'Fredoka One';
 }
 
 @media (min-width: 1600px) and (max-width: 1919px) {
@@ -28,6 +29,11 @@
 body {
   min-width: 1024px;
   max-width: 1920px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/back2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 input[type="text"] {
@@ -96,30 +102,45 @@ nav.nav ul li {
 }
 
 nav.nav ul li a {
+  position: relative;
   font-weight: bold;
   text-decoration: none;
   padding: 1em;
   text-transform: uppercase;
-  text-shadow: 0 0 0.25em #fed1be;
+  text-shadow: 0 0 0.5em #0b0b0b;
   transition: all 0.5s;
-  color: inherit;
+  color: #d1ece4;
 }
 
-nav.nav ul li a:visited {
-  color: inherit;
+nav.nav ul li a:after {
+  content: '';
+  position: absolute;
+  left: 1.1em;
+  right: 1.1em;
+  bottom: 0.9em;
+  display: block;
+  height: 2px;
+  transition: all 0.5s;
+  background: #d1ece4;
 }
 
 nav.nav ul li a:hover {
   color: #fed1be;
 }
 
+nav.nav ul li a:hover:after {
+  opacity: 0;
+  left: 50%;
+  right: 50%;
+}
+
 nav.nav-fixed {
   position: fixed !important;
-  background-color: rgba(150, 220, 250, 0.35);
+  background-color: rgba(0, 0, 0, 0.35);
 }
 
 #home {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../img/back.jpg");
+  background-image: linear-gradient(rgba(61, 117, 125, 0.2), rgba(61, 117, 125, 0.2)), url("../img/back.jpg");
   background-size: cover;
   background-position: center;
   display: -webkit-flex;
@@ -224,7 +245,14 @@ nav.nav-fixed {
   display: flex;
 }
 
+#findyourplace {
+  padding-left: 7.5rem;
+  padding-right: 7.5rem;
+}
+
 #findyourplace .form-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 1rem;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -402,7 +430,6 @@ nav.nav-fixed {
   display: -ms-inline-flexbox;
   display: inline-flex;
   width: 100%;
-  font-weight: bold;
   padding: 0.5em 1em;
   border: 0.1em solid #3a9fc0;
   background-color: #e8f4f8;
@@ -446,21 +473,6 @@ nav.nav-fixed {
 .rating > label {
   color: #ddd;
   float: right;
-}
-
-/***** CSS Magic to Highlight Stars on Hover *****/
-.rating > input:checked ~ label,
-.rating:not(:checked) > label:hover,
-.rating:not(:checked) > label:hover ~ label {
-  color: #FFD700;
-}
-
-/* hover previous stars in list */
-.rating > input:checked + label:hover,
-.rating > input:checked ~ label:hover,
-.rating > label:hover ~ input:checked ~ label,
-.rating > input:checked ~ label:hover ~ label {
-  color: #FFc000;
 }
 
 /***** CSS Magic to Highlight Stars on Hover *****/
@@ -541,12 +553,12 @@ nav.nav-fixed {
   padding: 1em 1.5em;
   border-radius: 1.25em;
   background-color: #abe1fd;
-  transition: box-shadow 0.5s;
-  transition: background 0.5s;
+  box-shadow: 0 0 0.5em #313131;
+  transition: all 0.5s;
 }
 
 .btn:hover {
-  box-shadow: 0 0 0.5em black;
+  box-shadow: 0 0 0.75em black;
   background-color: #60c6fb;
 }
 
