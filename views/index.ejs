@@ -51,11 +51,7 @@
               <div class="head"><h3>Province</h3></div>
               <div class="headingbox">
                 <input type="text" class="province-select" name="province" list="provincelist" placeholder="Provinces">
-                <datalist id="provincelist">
-                  <% provinces.forEach(function(province){ %>
-                    <option value="<%=province.name%>"><%=province.name%></option>
-                  <%});%>
-                </datalist>
+
 
               </div>
             </div>
@@ -136,37 +132,37 @@
     <div class="gallery">
       <div class="gallery-1">
         <div class="gallery-item">
-          <img src="<%=pic[0].img%>" alt="<%=pic[0].caption%>" class="gallery-img">
-          <a href="<%=pic[0].link%>" class="img-overlay"><h1><span><%=pic[0].caption%></span></h1></a>
+          <img src="<%=recommendedPlace[0].imgurl%>" alt="<%=recommendedPlace[0].name%>" class="gallery-img">
+          <a href="<%=recommendedPlace[0].link%>" class="img-overlay"><h1><span><%=recommendedPlace[0].name%></span></h1></a>
         </div>
         <div class="gallery-item">
-          <img src="<%=pic[1].img%>" alt="<%=pic[1].caption%>" class="gallery-img">
-          <a href="<%=pic[1].link%>" class="img-overlay"><h1><span><%=pic[1].caption%></span></h1></a>
+          <img src="<%=recommendedPlace[1].imgurl%>" alt="<%=recommendedPlace[1].name%>" class="gallery-img">
+          <a href="<%=recommendedPlace[1].link%>" class="img-overlay"><h1><span><%=recommendedPlace[1].name%></span></h1></a>
         </div>
       </div>
       <div class="gallery-2">
         <div class="gallery-item">
-          <img src="<%=pic[2].img%>" alt="<%=pic[2].caption%>" class="gallery-img">
-          <a href="<%=pic[2].link%>" class="img-overlay"><h1><span><%=pic[2].caption%></span></h1></a>
+          <img src="<%=recommendedPlace[2].imgurl%>" alt="<%=recommendedPlace[2].name%>" class="gallery-img">
+          <a href="<%=recommendedPlace[2].link%>" class="img-overlay"><h1><span><%=recommendedPlace[2].name%></span></h1></a>
         </div>
         <div class="gallery-item">
-          <img src="<%=pic[3].img%>" alt="<%=pic[3].caption%>" class="gallery-img">
-          <a href="<%=pic[3].link%>" class="img-overlay"><h1><span><%=pic[3].caption%></span></h1></a>
+          <img src="<%=recommendedPlace[3].imgurl%>" alt="<%=recommendedPlace[3].name%>" class="gallery-img">
+          <a href="<%=recommendedPlace[3].link%>" class="img-overlay"><h1><span><%=recommendedPlace[3].name%></span></h1></a>
         </div>
         <div class="gallery-item">
-          <img src="<%=pic[4].img%>" alt="<%=pic[4].caption%>" class="gallery-img">
-          <a href="<%=pic[4].link%>" class="img-overlay"><h1><span><%=pic[4].caption%></span></h1></a>
+          <img src="<%=recommendedPlace[4].imgurl%>" alt="<%=recommendedPlace[4].name%>" class="gallery-img">
+          <a href="<%=recommendedPlace[4].link%>" class="img-overlay"><h1><span><%=recommendedPlace[4].name%></span></h1></a>
         </div>
 
       </div>
       <div class="gallery-3">
         <div class="gallery-item">
-          <img src="<%=pic[5].img%>" alt="<%=pic[5].caption%>" class="gallery-img">
-          <a href="<%=pic[5].link%>" class="img-overlay"><h1><span><%=pic[5].caption%></span></h1></a>
+          <img src="<%=recommendedPlace[5].imgurl%>" alt="<%=recommendedPlace[5].name%>" class="gallery-img">
+          <a href="<%=recommendedPlace[5].link%>" class="img-overlay"><h1><span><%=recommendedPlace[5].name%></span></h1></a>
         </div>
         <div class="gallery-item">
-          <img src="<%=pic[6].img%>" alt="<%=pic[6].caption%>" class="gallery-img">
-          <a href="<%=pic[6].link%>" class="img-overlay"><h1><span><%=pic[6].caption%></span></h1></a>
+          <img src="<%=recommendedPlace[6].imgurl%>" alt="<%=recommendedPlace[6].name%>" class="gallery-img">
+          <a href="<%=recommendedPlace[6].link%>" class="img-overlay"><h1><span><%=recommendedPlace[6].name%></span></h1></a>
         </div>
       </div>
     </div>

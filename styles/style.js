@@ -25,12 +25,16 @@ $(document).ready(function() {
 // click and scroll
   $('.a-link').click(function() {
     event.preventDefault();
-    var target = $($(this).attr('href')).offset().top;
-    $('body').stop(true, false).animate(
-      {scrollTop:target},
-      {duration:500},
-      "easeInExpo"
-    );
+    var href = $(this).attr('href');
+    if(href!=''){
+      var target = $(href).offset().top;
+      $('body').stop(true, false).animate(
+        {scrollTop:target},
+        {duration:500},
+        "easeInExpo"
+      );
+    }
+
   });
 
 // quicksearch display result

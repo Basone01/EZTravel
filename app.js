@@ -3,7 +3,8 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const path = require('path');
 const app = express();
-const fs = require('fs');
+
+const dataFromFile = require('./libs/readfile');
 
 
 app.set('view engine','ejs');
@@ -14,52 +15,11 @@ app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-var readProvincesFile = fs.readFileSync("provinces.json");
-var provinces = JSON.parse(readProvincesFile);
-var readPlaceFile = fs.readFileSync("place.json");
-var places = JSON.parse(readPlaceFile);
-console.log(places[0]);
+
 
 app.get("/", (req,res)=>{
 	res.render("index",{
-		provinces:provinces,
-		pic:[
-			{
-				link:"/search?place=เชียงใหม่",
-				img:"/public/img/chiangmai.jpg",
-				caption:"เชียงใหม่"
-			},
-			{
-				link:"/search?place=เชียงใหม่",
-				img:"/public/img/chiangmai.jpg",
-				caption:"เชียงใหม่"
-			},
-			{
-				link:"/search?place=เชียงใหม่",
-				img:"/public/img/chiangmai.jpg",
-				caption:"เชียงใหม่"
-			},
-			{
-				link:"/search?place=เชียงใหม่",
-				img:"/public/img/chiangmai.jpg",
-				caption:"เชียงใหม่"
-			},
-			{
-				link:"/search?place=เชียงใหม่",
-				img:"/public/img/chiangmai.jpg",
-				caption:"เชียงใหม่"
-			},
-			{
-				link:"/search?place=เชียงใหม่",
-				img:"/public/img/chiangmai.jpg",
-				caption:"เชียงใหม่"
-			},
-			{
-				link:"/search?place=เชียงใหม่",
-				img:"/public/img/chiangmai.jpg",
-				caption:"เชียงใหม่"
-			}
-	]
+		recommendedPlace:dataFromFile.recommended
 	});
 })
 
@@ -82,7 +42,6 @@ app.get("/listsearch",(req,res)=>{
 });
 
 app.get("/search",(req,res)=>{
-	res.render('search',{places:places});
 	// console.log(req.query);
   // if (req.query.place=='') {
   //   res.render('search',{search:false});
@@ -105,9 +64,9 @@ app.get("/search",(req,res)=>{
 	// 	}else{
 	// 		res.render('search',{search:false});
 	// 	}
-
+	//
   // }
-
+console.log(dataFromFile.places);
  });
 
 
