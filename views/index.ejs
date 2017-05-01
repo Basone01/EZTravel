@@ -42,7 +42,7 @@
       <h1 class="logo-color text-large text-centered"><span>FIND</span> <span>YOUR PLACE</span></h1>
     </div>
 
-    <form class="full-form" action="index.html" method="post">
+    <form class="full-form" action="/search" method="get">
       <div class="form-block" >
         <div class="head"><h3>Filter</h3></div>
         <div class="form-box">
@@ -52,9 +52,9 @@
               <div class="headingbox">
                 <input type="text" class="province-select" name="province" list="provincelist" placeholder="Provinces">
                 <datalist id="provincelist">
-                  <% for( var i=0;i<76;i++){ %>
-                    <option value="bangkok">BANGKOK</option>
-                  <%}%>
+                  <% provinces.forEach(function(province){ %>
+                    <option value="<%=province.name%>"><%=province.name%></option>
+                  <%});%>
                 </datalist>
 
               </div>
@@ -62,10 +62,10 @@
             <div class="form-block"  id="Accomodation">
               <div class="head"><h3>Accomodation</h3></div>
               <div class="headingbox">
-                <label ><input type="checkbox" name="accomodation"> HOTEL</label>
-                <label ><input type="checkbox" name="accomodation"> MANSION</label>
-                <label ><input type="checkbox" name="accomodation"> RESORT</label>
-                <label ><input type="checkbox" name="accomodation"> HOUSE</label>
+                <label ><input type="checkbox" name="accomodation" value="hotel"> HOTEL</label>
+                <label ><input type="checkbox" name="accomodation" value="mansion"> MANSION</label>
+                <label ><input type="checkbox" name="accomodation" value="resort"> RESORT</label>
+                <label ><input type="checkbox" name="accomodation" value="house"> HOUSE</label>
               </div>
             </div>
           </div>
@@ -76,9 +76,9 @@
               <div class="headingbox">
                 <input  type="range" id="minprice" class="styled-range" min="200" max="20000" value="200" step="50" style="width:100%;">
                 <div class="text-centered" style="display:block;">
-                  <label class="inline"><input class="range-display rounded-border" id="minprice-display" type="number" name="price"
+                  <label class="inline"><input class="range-display rounded-border" id="minprice-display" type="number" name="minprice"
                     value="200" step="50" min="200" max="20000" style="width:4rem;text-indent:0.6rem;"> -</label>
-                  <label class="inline"><input class="range-display rounded-border" id="maxprice-display" type="number" name="price"
+                  <label class="inline"><input class="range-display rounded-border" id="maxprice-display" type="number" name="maxprice"
                     value="20000" step="50" min="200" max="20000" style="width:4rem;text-indent:0.6rem;"> Baht</label>
                 </div>
                 <input  type="range" id="maxprice" class="styled-range" min="200" max="20000" value="20000" step="50" style="width:100%;">
@@ -110,12 +110,12 @@
             <div class="form-block"  id="facility">
               <div class="head"><h3>Facility</h3></div>
               <div class="headingbox">
-                <label><input type="checkbox" name="facility"> WIFI</label>
-                <label><input type="checkbox" name="facility"> Fitness</label>
-                <label><input type="checkbox" name="facility"> Swimming Pool</label>
-                <label><input type="checkbox" name="facility"> Restaurant</label>
-                <label><input type="checkbox" name="facility"> Park</label>
-                <label><input type="checkbox" name="facility"> Night Club</label>
+                <label><input type="checkbox" name="facility" value="wifi"> WIFI</label>
+                <label><input type="checkbox" name="facility" value="fitness"> Fitness</label>
+                <label><input type="checkbox" name="facility" value="pool"> Swimming Pool</label>
+                <label><input type="checkbox" name="facility" value="restaurant"> Restaurant</label>
+                <label><input type="checkbox" name="facility" value="park"> Park</label>
+                <label><input type="checkbox" name="facility" value="club"> Night Club</label>
               </div>
             </div>
 
@@ -123,7 +123,7 @@
 
         </div>
         <div id="form-submit">
-          <button type="submit" name="button">GO!!</button>
+          <button type="submit">GO!!</button>
         </div>
       </div>
     </form>

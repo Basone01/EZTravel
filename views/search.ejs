@@ -18,28 +18,61 @@
          background-attachment: fixed;
       }
   </style>
+
 </head>
 <body>
   <%-include('navbar')%>
-  <div class="wrapper">
 
-    <section class="section content-stretch">
 
-      <%if(search){%>
-      <% datas.forEach(function(data){ %>
-          <h1 style="color:orange;"><%= data.name %></h1>
-      <% }); }%>
+    <section class="main-content screen-height">
+      <div id="map" style="height:100%;">
+
+      </div>
+      <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+        var request={
+          location:{lat: -34.397, lng: 150.644},
+          radius:5000,
+          types:['cafe']
+        }
+        var service = new google.maps.places.PlacesService(map);
+        service.nearbySearch(request, callback);
+      }
+      function callback(results , status){
+        if(status == google.maps.places.PlacesServiceStatus.OK){
+          for(var i=0;i<results.length;i++){
+            createMarker(results[i]);
+          }
+        }
+      }
+      function createMarker(place){
+        var placeLoc = place.geometry.location;
+        var marker = new google.maps.Marker({
+          map:map,
+          position:place.geometry.location
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6ViXb6gZdioSEemzn7opGP3Emj-PP9Ns&callback=initMap"
+    async defer></script>
+
     </section>
 
-  </div>
 
 
   <script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js">
 
   </script>
+
+
   <script type="text/javascript">
   jQuery(document).ready(function($) {
-    $('.scroll-link').click(function() {
+    $('.a-link').click(function() {
       /* Act on the event */
       event.preventDefault();
       window.location.href="/"+$(this).attr('href');;

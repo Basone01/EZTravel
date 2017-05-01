@@ -1,82 +1,143 @@
 [
   {
+    "id":"1",
     "name":"ม่อนแจ่ม",
-    "province": "เชียงใหม่"
+    "province": "เชียงใหม่",
+    "rate":"5",
+    "imgurl":"public/img/place/monjam.jpg"
+
   },
   {
+    "id":"2",
     "name":"เกาะสมุย",
-    "province": "สุราษฎร์ธานี"
+    "province": "สุราษฎร์ธานี",
+    "rate":"5",
+    "imgurl":"public/img/place/samui.jpg"
   },
   {
+    "id":"3",
     "name":"เกาะล้าน",
-    "province": "ชลบุรี"
+    "province": "ชลบุรี",
+    "rate":"4.5",
+    "imgurl":"public/img/place/larn.jpg"
   },
   {
+    "id":"4",
     "name":"เกาะหมาก",
-    "province": "ตราด"
+    "province": "ตราด",
+    "rate":"4.5",
+    "imgurl":"public/img/place/mak.jpg"
   },
   {
+    "id":"5",
     "name":"เขื่อนเชี่ยวหลาน",
-    "province": "สุราษฎร์ธานี"
+    "province": "สุราษฎร์ธานี",
+    "rate":"3",
+    "imgurl":"public/img/place/chiawlan.jpg"
   },
   {
+    "id":"6",
     "name":"เกาะพีพี",
-    "province": "กระบี่"
+    "province": "กระบี่",
+    "rate":"5",
+    "imgurl":"public/img/place/pp.jpg"
   },
   {
+    "id":"7",
     "name":"เกาะพยาม",
-    "province": "ระนอง"
+    "province": "ระนอง",
+    "rate":"3.5",
+    "imgurl":"public/img/place/payam.jpg"
   },
   {
+    "id":"8",
     "name":"ปางอุ๋ง",
-    "province": "แม่ฮ่องสอน"
+    "province": "แม่ฮ่องสอน",
+    "rate":"3.5",
+    "imgurl":"public/img/place/pangung.jpg"
   },
   {
+    "id":"9",
     "name":"น้ำตกเอราวัณ",
-    "province": "กาญจนบุรี"
+    "province": "กาญจนบุรี",
+    "rate":"2.5",
+    "imgurl":"public/img/place/erawan.jpg"
   },
   {
+    "id":"10",
     "name":"เขาใหญ่",
-    "province": "นครราชสีมา"
+    "province": "นครราชสีมา",
+    "rate":"2.5",
+    "imgurl":"public/img/place/kaoyai.jpg"
   },
   {
+    "id":"11",
     "name":"ภูทับเบิก",
-    "province": "เพชรบูรณ์"
+    "province": "เพชรบูรณ์",
+    "rate":"4",
+    "imgurl":"public/img/place/phutubberg.jpg"
   },
   {
+    "id":"12",
     "name":"ชะอำ",
-    "province": "เพชรบุรี"
+    "province": "เพชรบุรี",
+    "rate":"2",
+    "imgurl":"public/img/place/chaam.jpg"
   },
   {
+    "id":"13",
     "name":"ภูกระดึง",
-    "province": "เลย"
+    "province": "เลย",
+    "rate":"4",
+    "imgurl":"public/img/place/phugradueng.jpg"
   },
   {
+    "id":"14",
     "name":"สวนผึ้ง",
-    "province": "ราชบุรี"
+    "province": "ราชบุรี",
+    "rate":"4",
+    "imgurl":"public/img/place/suanphueng.jpg"
   },
   {
+    "id":"15",
     "name":"ภูชีฟ้า",
-    "province": "เชียงราย"
+    "province": "เชียงราย",
+    "rate":"4",
+    "imgurl":"public/img/place/phuchefah.jpg"
   },
   {
+    "id":"16",
     "name":"พระปฐมเจดีย์",
-    "province": "นครปฐม"
+    "province": "นครปฐม",
+    "rate":"1.5",
+    "imgurl":"public/img/place/phrapathom.jpg"
   },
   {
+    "id":"17",
     "name":"หาดป่าตอง",
-    "province": "ภูเก็ต"
+    "province": "ภูเก็ต",
+    "rate":"5",
+    "imgurl":"public/img/place/hadpathong.jpg"
   },
   {
+    "id":"18",
     "name":"เกาะทะลุ",
-    "province": "ประจวบคีรีขันธ์"
+    "province": "ประจวบคีรีขันธ์",
+    "rate":"4.5",
+    "imgurl":"public/img/place/khorthalu.jpg"
   },
   {
+    "id":"19",
     "name":"ดอยอินทนนท์",
-    "province": "เชียงใหม่"
+    "province": "เชียงใหม่",
+    "rate":"4.5",
+    "imgurl":"public/img/place/doiinthanon.jpg"
   },
   {
+    "id":"20",
     "name":"ห้วยน้ำดัง",
-    "province": "แม่ฮ่องสอน"
+    "province": "แม่ฮ่องสอน",
+    "rate":"3.5",
+    "imgurl":"public/img/place/huainamtang.jpg"
   }
 ]
