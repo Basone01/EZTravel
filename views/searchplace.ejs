@@ -25,17 +25,14 @@
 
 
     <section class="main-content screen-height">
-
-      <% accomodations.forEach(function(accomodation){ %>
-        <%=accomodation.name%>
-      <%});%>
-
+    
     </section>
 
 
 
+  <script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js">
 
-  <script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
+  </script>
 
 
   <script type="text/javascript">
@@ -44,6 +41,8 @@
       /* Act on the event */
       event.preventDefault();
       window.location.href="/"+$(this).attr('href');;
+
+
 
     });
   });

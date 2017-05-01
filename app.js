@@ -19,7 +19,8 @@ app.use(bodyParser.json());
 
 app.get("/", (req,res)=>{
 	res.render("index",{
-		recommendedPlace:dataFromFile.recommended
+		recommendedPlace:dataFromFile.recommendeds,
+		provinces:dataFromFile.provinces
 	});
 })
 
@@ -36,11 +37,12 @@ app.get("/listsearch",(req,res)=>{
         jsonres.push(place[i]);
       }
     }
+		console.log(jsonres);
 		res.json(jsonres);
 	}
-});
+})
 
-app.get("/search",(req,res)=>{
+app.get("/searchplace",(req,res)=>{
 	console.log(req.query);
   if (req.query.place=='') {
     res.render('search',{search:false});
@@ -60,12 +62,17 @@ app.get("/search",(req,res)=>{
 				datas:jsonres
 			});
 		}else{
-			res.render('search',{search:false});
+			res.render('searchplace',{search:false});
 		}
 
   }
-console.log(dataFromFile.places);
  });
+app.get('/search',(req,res)=>{
+	console.log(dataFromFile.accomodations);
+	res.render('search',{
+		accomodations:dataFromFile.accomodations
+	});
+})
 
 
 app.listen(3000,()=>{

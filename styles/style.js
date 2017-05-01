@@ -76,7 +76,7 @@ $(document).ready(function() {
         var res='';
         res+='<ul class="quicksearch-list">';
           for (var i = 0; i < response.length; i++) {
-            res+="<li class='list-item'> <a href=\"\/search?place="+response.name+"\" class='list-suggest-item' to="
+            res+="<li class='list-item'> <a href='/search?place="+response[i].name+"' class='list-suggest-item' to="
             +response[i].name+"><span>"
             +response[i].name+"</span> <span>จังหวัด : "
             +response[i].province
