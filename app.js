@@ -27,8 +27,7 @@ app.get("/listsearch",(req,res)=>{
 	if (req.query.place=='') {
     res.render('search',{search:false});
   }else {
-    var data = fs.readFileSync("place.json");
-    var place = JSON.parse(data);
+    var place = dataFromFile.places;
     var jsonres = [];
     for (var i = 0; i < place.length; i++) {
       if(place[i].name.includes(req.query.place)){
@@ -42,30 +41,29 @@ app.get("/listsearch",(req,res)=>{
 });
 
 app.get("/search",(req,res)=>{
-	// console.log(req.query);
-  // if (req.query.place=='') {
-  //   res.render('search',{search:false});
-  // }else {
-  //   var data = fs.readFileSync("place.json");
-  //   var place = JSON.parse(data);
-  //   var jsonres = [];
-  //   for (var i = 0; i < place.length; i++) {
-  //     if(place[i].name.includes(req.query.place)){
-  //       jsonres.push(place[i]);
-  //     }else if (place[i].province.includes(req.query.place)) {
-  //       jsonres.push(place[i]);
-  //     }
-  //   }
-	// 	if(jsonres.length>0){
-	// 		res.render('search',{
-	// 			search:true,
-	// 			datas:jsonres
-	// 		});
-	// 	}else{
-	// 		res.render('search',{search:false});
-	// 	}
-	//
-  // }
+	console.log(req.query);
+  if (req.query.place=='') {
+    res.render('search',{search:false});
+  }else {
+    var place = dataFromFile.places;
+    var jsonres = [];
+    for (var i = 0; i < place.length; i++) {
+      if(place[i].name.includes(req.query.place)){
+        jsonres.push(place[i]);
+      }else if (place[i].province.includes(req.query.place)) {
+        jsonres.push(place[i]);
+      }
+    }
+		if(jsonres.length>0){
+			res.render('search',{
+				search:true,
+				datas:jsonres
+			});
+		}else{
+			res.render('search',{search:false});
+		}
+
+  }
 console.log(dataFromFile.places);
  });
 

@@ -773,14 +773,37 @@ input[type=range].styled-range::-moz-range-thumb {
   font-weight: bolder;
   padding: 0.25em 0.75em;
   border-radius: 1.25em;
-  background-color: rgba(0, 0, 0, 0.25);
-  border: 0.15em solid #abe1fd;
+  border: 0.15em solid;
   box-shadow: 0 0 0.5em #313131;
   transition: all 0.5s;
-  color: #abe1fd;
 }
 
 .btn:hover {
+  box-shadow: 0 0 0.75em black;
+}
+
+.btn.btn-menu {
+  background-color: rgba(0, 0, 0, 0.25);
+  border-color: #abe1fd;
+  box-shadow: 0 0 0.5em #313131;
+  color: #abe1fd;
+}
+
+.btn.btn-menu:hover {
+  color: #fed1be;
+  border-color: #fed1be;
+  box-shadow: 0 0 0.75em black;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.btn.btn-submit {
+  background-color: rgba(0, 0, 0, 0.25);
+  border-color: #313131;
+  box-shadow: 0 0 0.5em #313131;
+  color: #313131;
+}
+
+.btn.btn-submit:hover {
   color: #fed1be;
   border-color: #fed1be;
   box-shadow: 0 0 0.75em black;
@@ -805,4 +828,11 @@ input[type=range].styled-range::-moz-range-thumb {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+}
+
+.text-input {
+  line-height: 1.5em;
+  width: 20em;
+  padding: 0.25em 1em;
+  text-indent: 0.5em;
 }

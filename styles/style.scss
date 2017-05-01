@@ -66,10 +66,18 @@
   font-weight: bolder;
   padding: 0.25em 0.75em;
   border-radius: 1.25em;
-   background-color: rgba(0,0,0,0.25);
-  border:0.15em solid $blue;
+  border:0.15em solid;
   box-shadow: 0 0 0.5em $black;
   transition: all 0.5s;
+  &:hover{
+    box-shadow: 0 0 0.75em black;
+  }
+
+}
+.btn.btn-menu{
+  background-color: rgba(0,0,0,0.25);
+  border-color:$blue;
+  box-shadow: 0 0 0.5em $black;
   color: $blue;
   &:hover{
     color: $orange;
@@ -77,7 +85,18 @@
     box-shadow: 0 0 0.75em black;
     background-color: rgba(0, 0, 0, 0.25);
   }
-
+}
+.btn.btn-submit{
+  background-color: rgba(0,0,0,0.25);
+  border-color:$black;
+  box-shadow: 0 0 0.5em $black;
+  color: $black;
+  &:hover{
+    color: $orange;
+    border-color: $orange;
+    box-shadow: 0 0 0.75em black;
+    background-color: rgba(0, 0, 0, 0.25);
+  }
 }
 .btn-md{
   width: 12em;
@@ -91,4 +110,10 @@
 }
 .flex{
   flex: 1;
+}
+.text-input{
+  line-height: 1.5em;
+  width: 20em;
+  padding: 0.25em 1em;
+  text-indent: 0.5em
 }
