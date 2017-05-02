@@ -5,7 +5,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="public/css/font-awesome.css">
   <link rel="stylesheet" href="public/css/style.css">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>EZTravel</title>
@@ -18,16 +17,78 @@
          background-attachment: fixed;
       }
   </style>
-
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous">
+  </script>
 </head>
 <body>
   <%-include('navbar')%>
 
+  <section class="main-content" id="findyourplace">
+    <%-include('filter')%>
+  </section>
 
-    <section class="main-content screen-height">
+    <section class="main-content" style="position:relative;">
 
       <% accomodations.forEach(function(accomodation){ %>
-        <%=accomodation.name%>
+        <div class="acc-item">
+          <div class="horizon">
+            <div class="acc-img">
+              <img src="<%=accomodation.imgurl%>" alt="">
+            </div>
+            <div class="acc-detail">
+              <div class="">
+                <h3>NAME : <%=accomodation.name%></h3>
+              </div>
+              <div class="">
+                <h3>TYPE : <%=accomodation.type%></h3>
+              </div>
+              <div class="">
+                <h3>GRADE :   <%var i=0%><% for(i; i<Math.floor(accomodation.rate); i++) { %>
+                                  <i class="fa fa-star"></i>
+                              <% } %>
+                              <%if((accomodation.rate-i)==0.5){%>
+                                <i class="fa fa-star-half"></i>
+                              <%}%>
+                </h3>
+              </div>
+
+              <div class="horizon">
+                <h3 class="noshrink pad">FACILITY :</h3>
+                <div class="horizon wrap">
+                  <h3 class="inline noshrink pad"><%if(accomodation.facility.wifi){%>
+                    WIFI
+                  <%}%></h3>
+                  <h3 class="inline noshrink pad"><%if(accomodation.facility.fitness){%>
+                    FITNESS
+                  <%}%></h3>
+                  <h3 class="inline noshrink pad"><%if(accomodation.facility.pool){%>
+                    SWIMMING POOL
+                  <%}%></h3>
+                  <h3 class="inline noshrink pad"><%if(accomodation.facility.restaurant){%>
+                    RESTAURANT
+                  <%}%></h3>
+                  <h3 class="inline noshrink pad"><%if(accomodation.facility.park){%>
+                    PARK
+                  <%}%></h3>
+                  <h3 class="inline noshrink pad"><%if(accomodation.facility.club){%>
+                    NIGHT CLUB
+                  <%}%></h3>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="horizon opposite">
+            <a type="submit" class="btn btn-submit"><%=accomodation.price%> ฿</a>
+          </div>
+
+
+
+        </div>
+
       <%});%>
 
     </section>
@@ -35,7 +96,7 @@
 
 
 
-  <script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
+
 
 
   <script type="text/javascript">

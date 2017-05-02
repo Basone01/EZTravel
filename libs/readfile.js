@@ -16,7 +16,9 @@ provinces=provinces.sort((a,b)=>{
               if(a > b) return 1;
               return 0;
           });
-
+provinces= provinces.filter(function(elem, index, self) {
+    return index == self.indexOf(elem);
+})
 exports.provinces = provinces
 exports.places=places;
 exports.recommendeds=recommended;

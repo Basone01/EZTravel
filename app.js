@@ -37,7 +37,7 @@ app.get("/listsearch",(req,res)=>{
         jsonres.push(place[i]);
       }
     }
-		console.log(jsonres);
+
 		res.json(jsonres);
 	}
 })
@@ -70,7 +70,8 @@ app.get("/searchplace",(req,res)=>{
 app.get('/search',(req,res)=>{
 	console.log(dataFromFile.accomodations);
 	res.render('search',{
-		accomodations:dataFromFile.accomodations
+		accomodations:dataFromFile.accomodations,
+		provinces:dataFromFile.provinces
 	});
 })
 

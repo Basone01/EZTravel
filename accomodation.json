@@ -4,30 +4,32 @@
     "type":"Hotel",
     "rate":"4",
     "price":"1500",
-    "province":"เชียงใหม่",
+    "province":"สุราษฎร์ธานี",
     "facility":{
       "wifi":true,
       "fitness":true,
-      "poll":true,
+      "pool":true,
       "restaurant":true,
       "park":true,
       "club":true
-    }
+    },
+    "imgurl":"public/img/acc/wretreat.jpg"
   },
   {
     "name":"ที่พัก2",
     "type":"Hotel",
     "rate":"4.5",
     "price":"2500",
-    "province":"เชียงใหม่",
+    "province":"กระบี่",
     "facility":{
       "wifi":true,
       "fitness":true,
-      "poll":true,
+      "pool":true,
       "restaurant":true,
       "park":true,
       "club":true
-    }
+    },
+    "imgurl":"public/img/acc/ppthebeach.jpg"
   },
   {
     "name":"ที่พัก3",
@@ -38,10 +40,11 @@
     "facility":{
       "wifi":true,
       "fitness":true,
-      "poll":true,
+      "pool":true,
       "restaurant":true,
       "park":true,
       "club":true
-    }
+    },
+    "imgurl":"public/img/acc/shangrilah.jpg"
   }
 ]
