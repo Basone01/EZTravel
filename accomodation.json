@@ -7,8 +7,8 @@
     "price":"1500",
     "province":"สุราษฎร์ธานี",
     "point":{
-      "lat": 9.571874,
-      "lng": 100.016650
+      "lat": 9.571956,
+      "lng": 100.016702
     },
     "facility":{
       "wifi":true,
@@ -28,8 +28,8 @@
     "price":"2500",
     "province":"กระบี่",
     "point":{
-      "lat": 7.728866,
-      "lng": 98.788199
+      "lat": 7.728778,
+      "lng": 98.788073
     },
     "facility":{
       "wifi":true,
