@@ -3,13 +3,18 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="/public/css/style.css">
     <title>
         EZTravel
     </title>
     <style media="screen">
 
     </style>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous">
+    </script>
 </head>
 
 <body>
@@ -87,10 +92,21 @@
     </div>
   </section>
   <%- include('footer') %>
-  <script
-    src="https://code.jquery.com/jquery-3.2.1.min.js"
-    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-    crossorigin="anonymous">
+  <script type="text/javascript">
+  $('.a-link').click(function() {
+
+    var href = $(this).attr('href');
+    if(href.split('/')[1]!=''){
+      event.preventDefault();
+      var target = $(href).offset().top;
+      $('body').stop(true, false).animate(
+        {scrollTop:target},
+        {duration:500},
+        "easeInExpo"
+      );
+    }
+
+  });
   </script>
   <script type="text/javascript" src="styles/rangeslider.js">
 

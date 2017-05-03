@@ -9,6 +9,8 @@ const dataFromFile = require('./libs/readfile');
 
 app.set('view engine','ejs');
 app.set('views',path.join(__dirname,'views'));
+
+
 app.use(express.static(__dirname));
 
 app.use(morgan('dev'));
@@ -68,13 +70,28 @@ app.get("/searchplace",(req,res)=>{
   }
  });
 app.get('/search',(req,res)=>{
-	console.log(dataFromFile.accomodations);
+	console.log(req.query);
+	// if(req.query)
+	var data=req.query;
 	res.render('search',{
 		accomodations:dataFromFile.accomodations,
-		provinces:dataFromFile.provinces
+		provinces:dataFromFile.provinces,
+		data:req.query
 	});
 })
 
+app.get('/acc/:id',(req,res)=>{
+	var accomodation;
+	dataFromFile.accomodations.forEach((acc)=>{
+		if(acc.id==req.params.id){
+			accomodation=acc;
+			console.log(acc);
+		}
+	})
+	res.render('acc',{
+		accomodation:accomodation
+	})
+})
 
 app.listen(3000,()=>{
 	console.log('Listening on port 3000 ');

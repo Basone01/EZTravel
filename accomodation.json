@@ -1,10 +1,15 @@
 [
   {
+    "id":"1",
     "name":"ที่พัก1",
     "type":"Hotel",
     "rate":"4",
     "price":"1500",
     "province":"สุราษฎร์ธานี",
+    "point":{
+      "lat": 9.571874,
+      "lng": 100.016650
+    },
     "facility":{
       "wifi":true,
       "fitness":true,
@@ -13,14 +18,19 @@
       "park":true,
       "club":true
     },
-    "imgurl":"public/img/acc/wretreat.jpg"
+    "imgurl":"/public/img/acc/wretreat.jpg"
   },
   {
+    "id":"2",
     "name":"ที่พัก2",
     "type":"Hotel",
     "rate":"4.5",
     "price":"2500",
     "province":"กระบี่",
+    "point":{
+      "lat": 7.709101,
+      "lng": 98.794726
+    },
     "facility":{
       "wifi":true,
       "fitness":true,
@@ -29,14 +39,19 @@
       "park":true,
       "club":true
     },
-    "imgurl":"public/img/acc/ppthebeach.jpg"
+    "imgurl":"/public/img/acc/ppthebeach.jpg"
   },
   {
+    "id":"3",
     "name":"ที่พัก3",
     "type":"Hotel",
     "rate":"5",
     "price":"3500",
     "province":"เชียงใหม่",
+    "point":{
+      "lat": 18.778508,
+      "lng": 99.000306
+    },
     "facility":{
       "wifi":true,
       "fitness":true,
@@ -45,6 +60,6 @@
       "park":true,
       "club":true
     },
-    "imgurl":"public/img/acc/shangrilah.jpg"
+    "imgurl":"/public/img/acc/shangrilah.jpg"
   }
 ]

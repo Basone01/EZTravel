@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="public/css/style.css">
+  <link rel="stylesheet" href="/public/css/style.css">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>EZTravel</title>
   <style media="screen">
@@ -59,22 +59,22 @@
                 <h3 class="noshrink pad">FACILITY :</h3>
                 <div class="horizon wrap">
                   <h3 class="inline noshrink pad"><%if(accomodation.facility.wifi){%>
-                    WIFI
+                    <i class="fa fa-2x fa-wifi"></i> WIFI
                   <%}%></h3>
                   <h3 class="inline noshrink pad"><%if(accomodation.facility.fitness){%>
-                    FITNESS
+                    <i class="fa fa-2x fa-bicycle"></i> FITNESS
                   <%}%></h3>
                   <h3 class="inline noshrink pad"><%if(accomodation.facility.pool){%>
-                    SWIMMING POOL
+                    <i class="fa fa-2x fa-tint"></i> SWIMMING POOL
                   <%}%></h3>
                   <h3 class="inline noshrink pad"><%if(accomodation.facility.restaurant){%>
-                    RESTAURANT
+                    <i class="fa fa-2x fa-cutlery"></i> RESTAURANT
                   <%}%></h3>
                   <h3 class="inline noshrink pad"><%if(accomodation.facility.park){%>
-                    PARK
+                    <i class="fa fa-2x fa-tree"></i> PARK
                   <%}%></h3>
                   <h3 class="inline noshrink pad"><%if(accomodation.facility.club){%>
-                    NIGHT CLUB
+                    <i class="fa fa-2x fa-beer"></i> NIGHT CLUB 
                   <%}%></h3>
                 </div>
 
@@ -82,7 +82,7 @@
             </div>
           </div>
           <div class="horizon opposite">
-            <a type="submit" class="btn btn-submit"><%=accomodation.price%> ฿</a>
+            <a href="/acc/<%=accomodation.id%>" type="submit" class="btn btn-submit"><%=accomodation.price%> ฿</a>
           </div>
 
 
